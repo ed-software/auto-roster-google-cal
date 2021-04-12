@@ -5,7 +5,7 @@ import DaysOfWeek from './days';
 import { WorkDay } from './workday';
 import { Shift } from './shift';
 
-fs.readFile('Roster.txt', 'utf8', (err: NodeJS.ErrnoException | null, Roster: string) => {
+fs.readFile('roster.txt', 'utf8', (err: NodeJS.ErrnoException | null, Roster: string) => {
   if (err) {
     console.log("Couldn't find Roster.txt");
     return;
