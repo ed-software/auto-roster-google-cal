@@ -93,7 +93,6 @@ export function createEventsFromDays(days: any) {
 }
 
 function createEvent(auth: AuthType, summary: string, startTime: Date, endTime: Date) {
-  console.log(startTime.toString());
   const event = {
     summary,
     start: {
@@ -120,7 +119,7 @@ function createEvent(auth: AuthType, summary: string, startTime: Date, endTime: 
         );
         return;
       }
-      console.log("Event created: %s", event.htmlLink);
+      console.log("Event created: %s", startTime.toString());
     }
   );
 }
