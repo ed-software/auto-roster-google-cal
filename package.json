@@ -4,8 +4,7 @@
   "main": "index.ts",
   "license": "MIT",
   "scripts": {
-    "build": "tsc",
-    "start": "node build"
+    "start": "ts-node src/index.ts"
   },
   "dependencies": {
     "@babel/preset-env": "^7.13.10",
@@ -21,6 +20,7 @@
     "@babel/plugin-syntax-typescript": "^7.12.13",
     "@babel/plugin-transform-typescript": "^7.13.0",
     "@babel/types": "^7.13.0",
-    "babel-cli": "^6.26.0"
+    "babel-cli": "^6.26.0",
+    "ts-node": "^9.1.1"
   }
 }
