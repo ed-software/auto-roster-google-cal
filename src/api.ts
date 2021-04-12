@@ -82,13 +82,13 @@ export function createEventsFromDays(days: any) {
   fs.readFile("credentials.json", (err: NodeJS.ErrnoException | null, content: any) => {
     if (err) return console.log("Error loading client secret file:", err);
     // Authorize a client with credentials, then call the Google Calendar API.
-    days.forEach((day: any) =>
-      day.shifts.forEach((shift: any) => {
-        authorize(JSON.parse(content), (auth) =>
+    authorize(JSON.parse(content), (auth) => {
+      days.forEach((day: any) => {
+        day.shifts.forEach((shift: any) => {
           createEvent(auth, shift.summary, shift.start, shift.end)
-        );
-      })
-    );
+        });
+      });
+    });
   });
 }
 
